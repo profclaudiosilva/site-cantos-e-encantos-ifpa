@@ -1,0 +1,508 @@
+/* ============================
+     MOBILE – ATÉ 768px
+============================ */
+@media (max-width: 768px) {
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* ===== ESCONDER DESKTOP ===== */
+  .versao-desktop,
+  .album-layout {
+    display: none !important;
+  }
+
+  .versao-mobile,
+  .album-mobile {
+    display: block !important;
+  }
+
+  /* ===== MENU ===== */
+  .menu-superior {
+  width: 100%;
+  overflow: visible !important;   /* LIBERA O DROPDOWN */
+  z-index: 9999999 !important;
+  position: relative;
+}
+
+  .menu-superior ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    padding: 12px 0;
+  }
+
+  .menu-superior a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+ .submenu {
+  position: absolute !important;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  z-index: 99999999 !important;
+  border-radius: 10px;
+  padding: 6px 0;
+  min-width: 180px;
+}
+
+
+  /* ===== HOME MOBILE ===== */
+  .mobile-galeria {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 25px 0;
+  }
+
+  .mobile-item img {
+    width: 92%;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .mobile-titulo {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #204060;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* ===== ÁLBUM MOBILE ===== */
+  .album-mobile {
+    width: 95%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 10px;
+  }
+
+  .album-mobile-titulo {
+    font-size: 1.7em;
+    padding: 0 10px;
+    overflow-wrap: break-word;
+  }
+
+  .album-mobile-capa {
+    width: 95%;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    justify-content: center;
+  }
+
+  /* ===== LEGENDAS ===== */
+  .album-mobile-textos {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .mobile-legenda {
+    justify-content: center;
+    background: rgba(255,255,255,0.5);
+    border: 2px solid #9cc99a;
+    border-radius: 18px;
+    padding: 15px;
+    text-align: justify;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* ===== IMAGENS ===== */
+  .album-mobile-imagens {
+    width: 95%;
+    border-radius: 18px;
+    
+    justify-content: center;
+  }
+
+  .album-mobile-imagens img {
+    width: 95%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
+}
+@media (max-width: 768px) {
+
+  /* Faz o dropdown aparecer SEM SER COBERTO */
+  .menu-superior {
+    position: relative;
+    z-index: 9999999 !important;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;              /* desce logo abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 8px 0;
+    border-radius: 10px;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 999999999 !important;  /* força ficar por cima */
+  }
+
+  /* MOSTRAR O SUBMENU QUANDO PASSAR O DEDO / CLICAR */
+  .dropdown:hover .submenu,
+  .dropdown:focus-within .submenu {
+    display: block !important;
+  }
+}
+@media (max-width: 768px) {
+
+  /* MENU LIBERADO PARA O DROPDOWN EXPANDIR */
+  .menu-superior {
+    width: 100%;
+    position: relative;
+    overflow: visible !important;      /* <--- LIBERA O DROPDOWN */
+    z-index: 999999 !important;
+  }
+
+  /* DROPDOWN FLEXÍVEL */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: white;
+    border-radius: 12px;
+    padding: 8px 0;
+
+    max-width: 80vw;                   /* <--- ocupa máx. 80% da tela */
+    width: auto;                       /* <--- ajusta sozinho */
+    min-width: 150px;                  /* <--- mínimo elegante */
+
+    word-wrap: break-word;             /* <--- permite quebra */
+    overflow-wrap: break-word;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+
+    z-index: 9999999 !important;
+    text-align: center;
+  }
+
+  /* ITENS INTERNOS DO DROPDOWN */
+  .submenu a {
+    display: block;
+    padding: 10px 14px;
+    font-size: 14px;                   /* <--- reduz fonte */
+    line-height: 1.2em;
+    white-space: normal;               /* <--- PERMITE QUE O TEXTO QUEBRE */
+  }
+
+  /* MOSTRAR DROPDOWN AO CLICAR */
+  .dropdown:hover .submenu,
+  .dropdown:focus-within .submenu {
+    display: block !important;
+  }
+}
+@media (max-width: 768px) {
+
+  .integrantes-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .integrantes-lista {
+    gap: 20px;
+  }
+
+  .integrante-item {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .integrante-foto {
+    width: 60px;
+    height: 60px;
+   
+  }
+
+  .integrante-nome {
+    font-size: 18px;
+  }
+
+  .grupo-foto {
+    width: 95%;
+    max-width: 450px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* ===== LAYOUT DOS INTEGRANTES NO MOBILE ===== */
+  .integrantes-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 25px;
+    text-align: center;
+  }
+
+  /* Foto grande vem logo após o título */
+  .integrantes-grupo {
+    order: 1;                 /* primeiro depois do título */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .grupo-foto {
+    width: 95%;
+    max-width: 450px;
+    border-radius: 22px;
+    border: 20px;
+    
+  }
+
+  .grupo-legenda {
+    font-size: 16px;
+    color: #204060;
+    margin-top: -5px;
+  }
+
+  /* Lista dos integrantes vem DEPOIS da foto e da legenda */
+  .integrantes-lista {
+    order: 2;                 /* aparece abaixo da foto */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .integrante-item {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .integrante-foto {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #204060;
+   
+  }
+
+  .integrante-nome {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+ /* CAIXA DA LEGENDA DA FOTO DO GRUPO */
+  .grupo-legenda {
+    background: rgba(255, 255, 255, 0.55);   /* branquinho transparente */
+    border: 2px solid #9cc99a;               /* borda verde clara */
+    border-radius: 18px;
+    padding: 12px 14px;
+    width: 95%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: justify;                     /* mesma formatação das legendas dos álbuns */
+    box-sizing: border-box;
+    line-height: 1.4em;
+  }
+   /* LISTA ALINHADA À ESQUERDA */
+  .integrantes-lista {
+    align-items: flex-start;    /* coloca todos alinhados no canto */
+    width: 100%;
+    padding-left: 10px;         /* leve margem elegante */
+  }
+
+  /* CADA LINHA DE INTEGRANTE BEM ORGANIZADA */
+  .integrante-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  /* NOME DO INTEGRANTE ALINHADO Á ESQUERDA */
+  .integrante-nome {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;            /* alinha o texto */
+    width: 100%;                 /* ocupa linha inteira → nunca entorta */
+    display: block;
+  }
+  /* ============================================================
+      LAYOUT DESKTOP — INTEGRANTES À ESQUERDA (FIXO)
+   ============================================================ */
+
+@media (min-width: 769px) {
+
+  /* Container geral em duas colunas */
+  .integrantes-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;  /* esquerda = 300px, direita flexível */
+    gap: 40px;
+    padding: 40px;
+    align-items: start;
+  }
+
+  /* ===== COLUNA ESQUERDA (INTEGRANTES) ===== */
+  .integrantes-lista {
+    position: sticky;   /* fica fixa na rolagem */
+    top: 140px;         /* abaixo do menu */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .integrante-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .integrante-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #204060;
+  }
+
+  .integrante-nome {
+    font-weight: bold;
+    color: #204060;
+    font-size: 1.1em;
+  }
+
+  /* ===== COLUNA DIREITA (FOTO + LEGENDAS) ===== */
+
+  /* foto do grupo sempre fica acima */
+  .foto-grupo {
+    grid-column: 2;   /* força ficar na coluna direita */
+  }
+
+  .grupo-foto {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    margin-bottom: 25px;
+  }
+
+  /* legendas sempre abaixo */
+  .legenda {
+    grid-column: 2;   /* força ficar na coluna direita */
+    margin-bottom: 25px;
+  }
+
+  .texto-bloco {
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid #9cc99a;
+    border-radius: 20px;
+    padding: 20px 25px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+}
+/* ===== FOTOS DOS INTEGRANTES NO MOBILE — REDONDAS ===== */
+@media (max-width: 768px) {
+
+  .integrante-foto,
+  .integrante-foto-mobile {
+    width: 70px;              /* tamanho ideal para mobile */
+    height: 70px;
+    border-radius: 50%;       /* deixa redondo */
+    object-fit: cover;        /* preenche sem distorcer */
+    border: 3px solid #204060; 
+  }
+
+}
+/* ==========================================================
+      VERSÃO MOBILE — IMAGEM PRINCIPAL + LISTA DE INTEGRANTES
+   ========================================================== */
+@media (max-width: 768px) {
+
+  /* ===== IMAGEM PRINCIPAL (AGORA GRANDE E CENTRALIZADA) ===== */
+  .grupo-foto-mobile {
+    width: 95% !important;       /* bem grande */
+    max-width: 500px;            /* limite bonito */
+    margin: 0 auto;              /* centraliza */
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+
+  /* ===== LISTA DOS INTEGRANTES ===== */
+  .integrantes-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding-left: 10px;   /* alinhamento elegante */
+  }
+
+  /* Cada integrante em LINHA, não coluna */
+  .integrante-item-mobile {
+    display: flex;
+    flex-direction: row;      /* FOTO ←→ NOME NA MESMA LINHA */
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* Foto redonda bonitinha */
+  .integrante-foto-mobile {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #204060;
+  }
+
+  /* Nome alinhado à esquerda */
+  .integrante-nome-mobile {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;          /* alinha ao canto */
+    width: 100%;               /* ocupa a linha inteira */
+    margin: 0;
+  }
+}
+h4{
+  font-size: 1em;
+  opacity: 0.8;
+  font-weight: normal;
+  display: block;
+  margin-top: 3px;
+}
