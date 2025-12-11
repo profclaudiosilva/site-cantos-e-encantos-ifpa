@@ -79,8 +79,14 @@
     font-weight: bold;
     color: #204060;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 45px;
   }
+
+  .mobile-subtitulo2 {
+  
+  font-size: 1.1em;
+  color: #204060;
+}
 
   /* ===== ÁLBUM MOBILE ===== */
   .album-mobile {
